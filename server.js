@@ -16,14 +16,6 @@ app.get('/', (req, res) => {
     res.json({ msg: 'all ok ' })
 })
 
-// easter eggs
-app.get('/gerardina', (req, res) => {
-    res.json({ name: "Gerardina", role: "Best supporter ever", info: "Super beautiful and sweet, I love her" })
-})
-app.get('/conzy', (req, res) => {
-    res.json({ name: "CONZY.", role: "My girlfriend", info: "We are super cute and stupid together, I love her" })
-})
-
 //routes
 require('./app/routes/auth.routes')(app)
 require('./app/routes/user.routes')(app)

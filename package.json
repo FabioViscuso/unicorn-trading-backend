@@ -1,13 +1,13 @@
 {
-  "name": "testnode",
+  "name": "unicorn-trading-backend",
   "version": "1.0.0",
-  "description": "simple node project",
+  "description": "The backend server for Unicorn Trading",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "start-watch": "nodemon server.js"
   },
-  "author": "jagama",
+  "author": "Fabio V, Bibin N, Roberta T, Marco M",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
