@@ -1,5 +1,6 @@
 const express = require('express')
 const cors = require('cors')
+const env = require('./app/config/env.config')
 
 const app = express()
 
@@ -19,13 +20,9 @@ app.get('/', (req, res) => {
 //routes
 require('./app/routes/auth.routes')(app)
 require('./app/routes/user.routes')(app)
-require('./app/routes/product.routes')(app)
-require('./app/routes/wishlist.routes')(app)
 
 //set port & listen
-
-const PORT = process.env.PORT || 8080
-app.listen(PORT, () => {
+app.listen(env.PORT, () => {
     console.log('server up & running')
 })
 

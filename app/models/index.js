@@ -65,8 +65,6 @@ db.sequelize = sequelize;
 
 db.user = require("../models/user.model.js")(sequelize, Sequelize);
 db.role = require("../models/role.model.js")(sequelize, Sequelize);
-db.wishlist = require("./wishlist.model.js")(sequelize, Sequelize);
-db.product = require("../models/product.model.js")(sequelize, Sequelize);
 
 db.role.belongsToMany(db.user, {
     through: "user_roles",
@@ -78,9 +76,6 @@ db.user.belongsToMany(db.role, {
     foreignKey: "userId",
     otherKey: "roleId"
 });
-
-db.user.hasOne(db.wishlist);
-db.wishlist.belongsTo(db.user);
 
 db.ROLES = ["user", "admin", "moderator"];
 
